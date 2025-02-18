@@ -1,0 +1,29 @@
+import java.util.*;
+public class lCm {
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Enter thenumber:");
+        int num1= inp.nextInt();
+        System.out.print("Enter thenumber:");
+        int num2= inp.nextInt();
+        int ans=lcm(num1,num2);
+        System.out.print("The Lcm of "+num1+"and"+num2+"is : "+ans);
+
+
+    }
+    public static int  lcm(int num1,int num2){
+        int i=1;
+//lcm me num1*num2 me hi pura possibility hai
+        while(i<=num2){ //loop pura second number tak chlega
+            int factor=i *num1; //it will print table of first number
+            if(factor% num2==0){//it will check that the lowest answer of first table is divisible by second number
+                return factor;//return the answer
+
+
+            }
+            i++;
+        }
+
+        return 0;
+    }
+}
